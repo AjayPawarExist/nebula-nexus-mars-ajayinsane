@@ -15,7 +15,7 @@ export default function ProjectDemoPage() {
 
         <div className="w-full aspect-video rounded-xl overflow-hidden border border-white/10 shadow-lg">
           <iframe
-            src="https://www.youtube.com/embed/YOUR_VIDEO_ID"
+            src="https://www.youtube.com/embed/U8TzpE6r-rE?si=rsb_fqak96D2i_0r"
             title="YouTube project demo"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowFullScreen
