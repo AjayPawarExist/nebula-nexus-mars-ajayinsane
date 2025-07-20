@@ -3,7 +3,7 @@ import Image from 'next/image'
 
 export default function Page() {
   return (
-    <div className="flex items-center justify-center flex-col h-screen bg-black">
+    <div className="flex items-center justify-center flex-col h-screen">
       <div className="w-32 h-32 relative animate-[spin_6s_linear_infinite]">
         <Image
           src="/mars.png"

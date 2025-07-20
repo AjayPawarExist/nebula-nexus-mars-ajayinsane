@@ -18,11 +18,11 @@ export default function MarsGlobe({
 }: MarsGlobeProps) {
   return (
     <div style={{ width, height }}>
-      <Canvas frameloop="demand" camera={{ position: [0, 0, 3], fov: 50 }}>
+      <Canvas frameloop="always" camera={{ position: [0, 0, 3], fov: 50 }}>
         <ambientLight intensity={0.7} />
         <directionalLight position={[5, 5, 5]} intensity={1} castShadow />
         <Mars scale={scale} />
-        <OrbitControls enableZoom={false} enablePan={false} />
+        <OrbitControls enableZoom={false} enablePan={false} autoRotate autoRotateSpeed={0.5} />
       </Canvas>
     </div>
   )
