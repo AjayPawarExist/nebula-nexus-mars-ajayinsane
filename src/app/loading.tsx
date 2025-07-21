@@ -1,10 +1,10 @@
 import React from 'react'
 import Image from 'next/image'
 
-export default function Page() {
+export default function Loading() {
   return (
     <div className="flex items-center justify-center flex-col h-screen">
-      <div className="w-32 h-32 relative animate-[spin_6s_linear_infinite]">
+      <div className="w-36 h-36 aspect-square relative animate-[spin_3s_linear_infinite]">
         <Image
           src="/mars.png"
           alt="Mars"
@@ -13,9 +13,6 @@ export default function Page() {
           className="object-contain"
         />
       </div>
-      <p className="mt-6 text-red-400 text-lg font-semibold animate-pulse">
-        Loading Mars...
-      </p>
     </div>
   )
 }

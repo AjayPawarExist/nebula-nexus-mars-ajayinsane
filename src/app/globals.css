@@ -113,31 +113,53 @@
 }
 
 @layer base {
-  html {
-    @apply scroll-smooth bg-[#0b0f1a] text-white;
+  * {
+    @apply border-border outline-ring/50;
   }
   body {
-    @apply relative antialiased font-sans overflow-x-hidden overflow-y-hidden;
+    @apply bg-background text-foreground antialiased;
   }
 }
 
-@layer utilities {
-  @keyframes ping-fast {
-    0% {
-      transform: scale(1);
-      opacity: 1;
-    }
-    75% {
-      transform: scale(2.2);
-      opacity: 0;
-    }
-    100% {
-      transform: scale(2.4);
-      opacity: 0;
-    }
+@keyframes gradientMove {
+  0%,
+  100% {
+    background-position: 0% 50%;
   }
-
-  .animate-ping-fast {
-    animation: ping-fast 1.8s ease-in-out infinite;
+  50% {
+    background-position: 100% 50%;
   }
 }
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.6s ease-out;
+}
+
+/* Override ShadCN Dialog default constraints */
+[data-radix-dialog-content] {
+  max-width: none !important;
+  width: 100vw !important;
+  height: 95vh !important;
+  margin: 0 !important;
+  transform: translate(-50%, -50%) !important;
+  left: 50% !important;
+  top: 50% !important;
+}
+
+/* Ensure dialog overlay covers full screen */
+[data-radix-dialog-overlay] {
+  position: fixed !important;
+  inset: 0 !important;
+}
+

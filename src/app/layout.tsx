@@ -1,34 +1,36 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import { ThemeProvider } from "@/themes/theme-provider";
 import { Toaster } from "@/components/ui/sonner";
 import { OnlineToast } from "@/components/network/OnlineToast";
 import { OfflineOverlay } from "@/components/network/OfflineOverlay";
 import CopyListenerClient from "@/hooks/useCopyListener";
-import Star from "@/components/ui/star";
+import SpaceBackground from "@/themes/space-background";
 
 export const metadata: Metadata = {
   title: {
-    default: "Mars Weather – Explore the Red Planet | AjayInsane",
-    template: "%s | Mars Weather Dashboard",
+    default: "Marsera – Mars Weather Dashboard by AjayInsane",
+    template: "%s | Marsera",
   },
   description:
-    "A visually immersive dashboard that simulates and visualizes Mars weather conditions using real NASA data. Built for Cosmos Hackathon MUJ by AjayInsane.",
-  applicationName: "Mars Weather Dashboard",
+    "Marsera is a futuristic and immersive dashboard for visualizing live and simulated Mars weather data. Built with real NASA data for Cosmos Hackathon MUJ by AjayInsane.",
+  applicationName: "Marsera",
   keywords: [
-    "Mars Weather",
-    "Mars dashboard",
-    "NASA Mars data",
+    "Marsera",
+    "Mars Weather Dashboard",
     "Mars temperature",
     "Mars wind speed",
-    "space mission data",
+    "Martian climate",
+    "NASA Mars data",
+    "Mars mission visualization",
     "planetary science",
-    "AjayInsane",
-    "Mars visualization",
-    "hackathon project",
+    "real-time space data",
     "Mars exploration",
     "sol tracker",
-    "Martian climate",
-    "data storytelling",
+    "AjayInsane",
+    "Cosmos Hackathon",
+    "space dashboard",
+    "Mars atmosphere"
   ],
   category: "science",
   metadataBase: new URL('https://mars.ajaypawar.com'),
@@ -40,26 +42,26 @@ export const metadata: Metadata = {
 
   twitter: {
     card: "summary_large_image",
-    title: "Mars Weather – Visually Explore the Red Planet",
+    title: "Marsera – Real-Time Mars Weather Visualization",
     description:
-      "Built for Cosmos Hackathon, this dashboard showcases real and simulated Mars weather data in a beautiful, animated UI.",
+      "Experience live and simulated Martian climate conditions in a beautifully designed dashboard powered by NASA data. Built for Cosmos Hackathon by AjayInsane.",
     site: "@AjayPawarExist",
   },
 
   openGraph: {
-    title: "Mars Weather Dashboard – Simulate & Visualize Martian Climate",
+    title: "Marsera – Mars Weather Dashboard",
     description:
-      "A cutting-edge scientific dashboard visualizing Mars weather using real NASA data. Built by AjayInsane for Cosmos Hackathon MUJ.",
+      "A scientifically inspired, visually stunning dashboard that brings Mars weather data to life. Explore Martian climate with Marsera – built by AjayInsane.",
     url: 'https://mars.ajaypawar.com',
-    siteName: "Mars Weather Dashboard",
+    siteName: "Marsera",
     locale: "en_US",
     type: "website",
     images: [
       {
-        url: 'https://mars.ajaypawar.com/og-image.png', 
+        url: 'https://mars.ajaypawar.com/og-image.png',
         width: 1200,
         height: 630,
-        alt: "Mars Weather – Cosmos Hackathon Project",
+        alt: "Marsera – Mars Weather Dashboard",
       },
     ],
   },
@@ -77,7 +79,7 @@ export const metadata: Metadata = {
   appleWebApp: {
     capable: true,
     statusBarStyle: "black-translucent",
-    title: "Mars Weather",
+    title: "Marsera",
     startupImage: [
       {
         url: "/icon.png",
@@ -92,8 +94,8 @@ export const metadata: Metadata = {
       url: `https://mars.ajaypawar.com`,
     },
     android: {
-      package: "com.ajayinsane.mars",
-      app_name: "Mars Weather Dashboard",
+      package: "com.ajayinsane.marsera",
+      app_name: "Marsera",
     },
     web: {
       url: `https://mars.ajaypawar.com`,
@@ -109,16 +111,23 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body>
+    <html lang="en" suppressHydrationWarning>
+      <body suppressHydrationWarning>
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="dark"
+          enableSystem
+          disableTransitionOnChange
+        >
         <OnlineToast />
         <OfflineOverlay />
         <CopyListenerClient />
-        <Star/>
-        <main className="relative z-10">
-          {children}
-        </main>
-        <Toaster richColors/>
+        <SpaceBackground />
+          <main className="relative z-10">
+            {children}
+          </main>
+          <Toaster richColors/>
+        </ThemeProvider>
       </body>
     </html>
   );
