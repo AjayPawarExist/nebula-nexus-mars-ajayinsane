@@ -49,7 +49,7 @@ export const metadata: Metadata = {
   },
 
   openGraph: {
-    title: "Marsera – Mars Weather Dashboard",
+    title: "BlueCarbon Ledger",
     description:
       "A scientifically inspired, visually stunning dashboard that brings Mars weather data to life. Explore Martian climate with Marsera – built by AjayInsane.",
     url: 'https://mars.ajaypawar.com',
