@@ -13,6 +13,9 @@ export default function manifest(): MetadataRoute.Manifest {
     orientation: 'portrait',
     lang: 'en',
     icons: [
+
+
+      
       {
         src: '/icon.png',
         sizes: '192x192',
