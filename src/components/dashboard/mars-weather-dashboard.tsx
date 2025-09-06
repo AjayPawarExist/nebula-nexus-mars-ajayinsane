@@ -155,7 +155,7 @@ export default function MarsWeatherDashboard() {
             <CardContent className="relative z-10 flex flex-col sm:flex-row w-full items-start sm:items-center justify-between p-4 sm:p-5 md:p-6 gap-4">
               <div className="flex items-center gap-3 sm:gap-4 w-full sm:w-auto">
                 <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold tracking-wide bg-gradient-to-r from-[#66fcf1] via-teal-300 to-white bg-clip-text text-transparent bg-[length:200%_200%] animate-[gradientMove_6s_ease_infinite]">
-                  Mars Weather
+                  India Weather
                 </h1>
                 <div className="flex items-center gap-2 sm:gap-3">
                   <Wifi className="h-5 w-5 sm:h-6 sm:w-6 text-green-400 animate-pulse" />
@@ -216,7 +216,7 @@ export default function MarsWeatherDashboard() {
               <DialogContent className="w-full h-full sm:max-w-[90vw] lg:max-w-[80vw] max-h-[90vh] bg-[#0b0f1a]/95 border-[#66fcf1]/30 rounded-xl overflow-hidden p-0 m-0">
                 <DialogHeader className="p-8 pb-6">
                   <DialogTitle className="text-[#66fcf1] text-2xl sm:text-3xl md:text-4xl font-bold">
-                    Mars Surface Exploration
+                    Earth Surface Exploration
                   </DialogTitle>
                 </DialogHeader>
                 <div className="h-[calc(95vh-120px)] w-full px-8 pb-8">
@@ -372,7 +372,7 @@ export default function MarsWeatherDashboard() {
                 </div>
               </div>
               <p className="text-sm md:text-base text-[#6dede5] tracking-wide font-medium">
-                Made by <span className="font-semibold text-white">AjayInsane</span>
+                Made by <span className="font-semibold text-white">Code Blenders</span>
               </p>
             </CardContent>
           </Card>

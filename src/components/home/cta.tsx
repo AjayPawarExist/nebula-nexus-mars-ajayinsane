@@ -56,11 +56,11 @@ export default function Cta() {
         />
 
         <h1 className="text-4xl md:text-6xl font-extrabold tracking-tight bg-gradient-to-r from-[#66fcf1] via-teal-300 to-white bg-clip-text text-transparent bg-[length:200%_200%] animate-[gradientMove_6s_ease_infinite]">
-          Welcome to Marsera
+          Welcome to BlurCarbon Ledgre
         </h1>
 
         <p className="text-lg text-gray-400 max-w-2xl mx-auto leading-relaxed">
-          Your gateway to real-time and simulated Mars weather. Designed for scientists, dreamers, and explorers alike.
+          Your gateway to a decentralized, carbon-neutral future. Manage your carbon credits with ease and transparency.
         </p>
 
        <motion.div
